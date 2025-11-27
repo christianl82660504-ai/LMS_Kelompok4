@@ -9,12 +9,9 @@ ctk.set_default_color_theme("blue")
 DB_USERS = {
     "2532076": "uib",
     "2532060": "uib",
-}
-
-# Nama Mahasiswa
-data_mahasiswa = {
-    "2532076": "christian",
-    "2532060": "pieter",
+    "2532057": "uib",
+    "2532059": "uib",
+    "2532021": "uib",
 }
 
 class LMSApp(ctk.CTk):
@@ -80,3 +77,4 @@ class LMSApp(ctk.CTk):
 if __name__ == "__main__":
     app = LMSApp()
     app.mainloop()
+
