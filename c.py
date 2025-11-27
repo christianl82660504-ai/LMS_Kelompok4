@@ -14,6 +14,15 @@ DB_USERS = {
     "2532021": "uib",
 }
 
+# Nama Mahasiswa
+data_mahasiswa = {
+    "2532076" : "Christian Lombu",
+    "2532060" : "Pieter Nicolaas",
+    "2532057" : "Royyan Putra",
+    "2532059" : "Agus Suwanto",
+    "2532021" : "Steven Kevin",
+}
+
 class LMSApp(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -57,8 +66,9 @@ class LMSApp(ctk.CTk):
 
         main_area = ctk.CTkFrame(self.container, fg_color="transparent")
         main_area.pack(side="right", fill="both", expand=True, padx=20, pady=20)
-
-        ctk.CTkLabel(main_area, text=f"Halo, Mahasiswa {npm}!", font=("Arial", 28, "bold")).pack(anchor="w")
+        
+        nama = data_mahasiswa.get(npm)
+        ctk.CTkLabel(main_area, text=f"Halo, {nama}!", font=("Arial", 28, "bold")).pack(anchor="w")
         ctk.CTkLabel(main_area, text="Selamat datang di LMS.", font=("Arial", 14)).pack(anchor="w", pady=5)
         
         info_card = ctk.CTkFrame(main_area, height=100, fg_color="#2B2B2B")
@@ -77,6 +87,9 @@ class LMSApp(ctk.CTk):
 if __name__ == "__main__":
     app = LMSApp()
     app.mainloop()
+
+
+
 
 
 
