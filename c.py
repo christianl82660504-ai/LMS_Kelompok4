@@ -29,7 +29,7 @@ class LMSApp(ctk.CTk):
         
         self.title("LMS Portal Mahasiswa")
         self.geometry("600x450")
-        self.state()
+        self.state("zoomed")
 
         self.container = ctk.CTkFrame(self, corner_radius=0, fg_color="transparent")
         self.container.pack(fill="both", expand=True)
