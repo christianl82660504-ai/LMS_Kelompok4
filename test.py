@@ -1,4 +1,4 @@
-import customtkinter as ctk
+,import customtkinter as ctk
 from tkinter import messagebox, ttk
 
 
@@ -22,7 +22,7 @@ tabel_users = [
     ["2532076", "Christian Lombu", "uib"],
     ["2532060", "Pieter Nicolaas", "uib"],
     ["2532057", "Royyan Putra", "uib"],
-    ["2532059", "Agus Suwanto", "uib"]
+    ["2532059", "Agus Suwanto", "uib"],
     ["2532021", "Steven Kevin", "uib"]
 ]
 
