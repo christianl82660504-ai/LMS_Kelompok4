@@ -90,8 +90,7 @@ class LMSApp(ctk.CTk):
         info_card.pack(fill="x", pady=20)
         ctk.CTkLabel(info_card, text="Status : Online", text_color="white").place(relx=0.5, rely=0.5, anchor="center")
 
-    def cek_login(self):
-        npm = self.npm_entry.get()
+    def cek_login(self, event=None):
         pwd = self.pass_entry.get()
         # basic validation
         if not npm or not pwd:
@@ -109,6 +108,7 @@ class LMSApp(ctk.CTk):
             self.tampilan_dashboard(npm)
         else:
             messagebox.showerror("Akses Ditolak", "NPM atau Password Anda salah.")
+            self.pass_entry.delete(0, "end")
 
     def tampilan_home(self):
         # show a simple home/overview for the logged-in user
