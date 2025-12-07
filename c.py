@@ -90,23 +90,21 @@ class LMSApp(ctk.CTk):
 
         self.tampilan_login()
 
-    #HALAMAN LOGIN
     def tampilan_login(self):
         for widget in self.container.winfo_children(): widget.destroy()
 
-        frame = ctk.CTkFrame(self.container, width=350, height=400, corner_radius=20)
+        frame = ctk.CTkFrame(self.container, width=350, height=400, corner_radius=15, fg_color="#1a1a1a", border_width=2, border_color="#0066cc")
         frame.place(relx=0.5, rely=0.5, anchor="center")
 
-        ctk.CTkLabel(frame, text="Login LMS", font=("Century Gothic", 24, "bold")).pack(pady=(40, 20))
+        ctk.CTkLabel(frame, text="Login LMS", font=("Arial", 20, "bold"), text_color="#0066cc").pack(pady=20)
+        self.npm_entry = ctk.CTkEntry(frame, placeholder_text="NPM", width=250, height=40, border_width=1, border_color="#0066cc", fg_color="#2a2a2a")
+        self.npm_entry.pack(pady=8, padx=15)
 
-        self.npm_entry = ctk.CTkEntry(frame, placeholder_text="NPM", width=220, height=40)
-        self.npm_entry.pack(pady=10)
+        self.pass_entry = ctk.CTkEntry(frame, placeholder_text="Password", show="*", width=250, height=40, border_width=1, border_color="#0066cc", fg_color="#2a2a2a")
+        self.pass_entry.pack(pady=8, padx=15)
 
-        self.pass_entry = ctk.CTkEntry(frame, placeholder_text="Password", show="*", width=220, height=40)
-        self.pass_entry.pack(pady=10)
-
-        btn_login = ctk.CTkButton(frame, text="MASUK", command=self.cek_login, width=220, height=40)
-        btn_login.pack(pady=30)
+        btn_login = ctk.CTkButton(frame, text="MASUK", command=self.cek_login, width=250, height=40, fg_color="#0066cc", hover_color="#0052a3")
+        btn_login.pack(pady=20, padx=15)
 
     def cek_login(self):
         nomor = self.npm_entry.get()
